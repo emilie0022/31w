@@ -1,0 +1,23 @@
+.recherche {
+
+  &__input,
+  &__bouton {
+    background-color: rgb(198, 232, 255);
+    border:2px solid rgb(14, 45, 59);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.5rem;
+    &:hover {
+      background-color: rgba(199, 239, 255, 0.525);
+    }
+    &:focus {
+      background-color: rgb(255, 255, 255);
+      outline: none;
+    }
+  }
+  &__input::placeholder {
+    color: rgb(14, 45, 59);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
