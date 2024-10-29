@@ -1,9 +1,15 @@
 .principal .global {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: auto;
 }
-
+.global{
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+}
 .principal__article{
-    border: 2px solid  rgb(31, 88, 128);;
+    border: 2px solid  rgb(31, 88, 128);
 }

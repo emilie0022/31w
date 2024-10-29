@@ -342,7 +342,15 @@ template {
 .principal .global {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin: auto;
+}
+
+.global {
+  display: flex;
+  flex-direction: column;
+  max-width: auto;
 }
 
 .principal__article {
