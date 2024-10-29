@@ -12,10 +12,9 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <form action="">
-                <input type="search" name="" id="" />
-                <img src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="20" height="20" />      
-            </form>
+            <?php 
+                get_search_form();
+            ?>
 
         </div>
     </section>
