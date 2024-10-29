@@ -19,6 +19,7 @@
   <header class="entete">
     <section class="global">
       <h1>31W</h1>
+      <h2>Introduction a un gestionnaire de contenue</h2>
       <nav>
         <ul>
           <li><a href="#">Accueil</a></li>
