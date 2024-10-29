@@ -59,9 +59,18 @@
   </main>
   <footer class="pied">
     <section class="global">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      <form class="recherche">
+        <input type="search" name="" id="" />
+        <img
+          src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000"
+          width="20"
+          height="20" />
+      </form>
     </section>
   </footer>
   <?php wp_footer(); ?>
