@@ -21,16 +21,15 @@
             <div class="entete__titre">
                 <h1><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
                 <h2><?php bloginfo('description') ?></h2>
+                <p>wrap sans couper le sous titre</p>
             </div>    
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">À propos</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <?php 
+            <div class="entete__nav">
+                <?php wp_nav_menu(
+                    array(
+                        "menu" => "principal",
+                        "container" => "nav"
+                    )
+                ); 
                 get_search_form();
                 ?>
             </div>    
