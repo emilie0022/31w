@@ -16,8 +16,20 @@ Template Name: Epreuve Finale
           </article>
         <?php endwhile; ?>
     </div>
-    
   <?php endif ?>
+
+      <div class="pays-champs">
+      <?php 
+
+        $participants = get_post_meta(get_the_ID(), 'nombre_participants', true);
+        $date_depart = get_post_meta(get_the_ID(), 'date_depart', true);
+        $date_retour = get_post_meta(get_the_ID(), 'date_retour', true);
+      ?>
+      <p>Nombre de participants : <?php echo esc_html($participants); ?></p>
+      <p>Date de départ : <?php echo esc_html($date_depart); ?></p>
+      <p>Date de retour : <?php echo esc_html($date_retour); ?></p>
+    </div>
+    
   </section>
 </main>
 <?php get_footer(); ?>
