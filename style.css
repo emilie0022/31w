@@ -334,6 +334,7 @@ Layout
 .global {
   width: 1100px;
   margin: 0 auto;
+  padding: 40px;
   background-color: rgba(184, 225, 255, 0.474);
 }
 
@@ -378,17 +379,32 @@ nav a:hover {
 
 li {
   list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
 .entete__global {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.entete__titre h1,
+.entete__titre h1 > a,
 .entete__titre h2 {
   margin: 0;
+  color: rgb(4, 28, 68);
+  text-decoration: none;
+  list-style: none;
+}
+
+.entete__nav {
+  display: flex;
+  flex-direction: column;
 }
 
 .recherche__input, .recherche__bouton {

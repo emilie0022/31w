@@ -1,9 +1,11 @@
 <footer class="pied">
     <section class="global pied__global">
         <div>
-            Auteur : Emilie Desmarais
-            lien github: https://github.com/emilie0022/31w.git
-            lien github pays: https://github.com/emilie0022/filtre-pays.git
+            <p>Auteur : Emilie Desmarais</p>
+            <br>
+            <p>lien github: https://github.com/emilie0022/31w.git</p>
+            <br>
+            <p>lien github pays: https://github.com/emilie0022/filtre-pays.git</p>
         </div>
         <div class="global">
             <nav>

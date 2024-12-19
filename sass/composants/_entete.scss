@@ -1,15 +1,18 @@
 .entete__global {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
 }
 
-.entete__titre h1,
+.entete__titre h1 > a,
 .entete__titre h2 {
   margin: 0;
+  color:rgb(4, 28, 68);
+  text-decoration: none;
+  list-style: none;
 }
 
 .entete__nav {
-
- 
+  display: flex;
+  flex-direction: column;
 }

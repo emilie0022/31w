@@ -8,5 +8,12 @@ nav a:hover{
 }
 li{
   list-style: none;
-
+  display: flex;
+  align-items: center;
+  
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
