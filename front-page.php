@@ -20,7 +20,7 @@
           ?>
           <article class="principal__article">
             <h5><?php echo $sigle ?></h5>
-            <h6><?php echo $titre ?></h6>
+            <h6><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h6>
             <p><?php echo wp_trim_words(get_the_excerpt(), 20, null); ?></p>
             <code><?php echo $duree; ?></code>
           </article>
