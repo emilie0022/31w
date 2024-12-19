@@ -30,6 +30,7 @@ Template Name: Epreuve Finale
       <p>Date de retour : <?php echo esc_html($date_retour); ?></p>
     </div>
     
+    <?php echo do_shortcode('[filtre_pays]'); ?>
   </section>
 </main>
 <?php get_footer(); ?>
