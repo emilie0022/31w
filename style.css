@@ -389,6 +389,10 @@ ul {
   gap: 1em;
 }
 
+.logo > a > img {
+  width: 130px;
+}
+
 .entete__global {
   display: flex;
   align-items: center;

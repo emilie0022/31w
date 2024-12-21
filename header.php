@@ -18,6 +18,11 @@
 <body>
     <header class="entete">
         <section class="global entete__global">
+            <div class="logo">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/logoClubVoyage.png" alt="Logo">
+                </a>
+            </div>
             <div class="entete__titre">
                 <h1><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
                 <h2><?php bloginfo('description') ?></h2>
