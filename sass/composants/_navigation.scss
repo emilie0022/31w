@@ -18,3 +18,9 @@ ul{
   flex-direction: row;
   gap: 1em;
 }
+@media (max-width: 768px) {
+  ul{
+    flex-direction: column;
+  }
+  
+}
