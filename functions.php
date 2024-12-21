@@ -49,3 +49,16 @@ if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
     ));
 }
 add_action('after_setup_theme', 'theme_setup');
+
+
+function enqueue_theme_scripts() {
+    wp_enqueue_script(
+        'menu-toggle',
+        get_template_directory_uri() . '/assets/js/menu.js',
+        array(),
+        false,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
+

@@ -25,7 +25,6 @@
                         if (has_custom_logo()) {
                             the_custom_logo(); 
                         } else {
-
                             echo '<h1>' . get_bloginfo('name') . '</h1>';
                         }
                         ?>
@@ -34,10 +33,15 @@
                 <div class="entete__titre">
                     <h1><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
                     <h2><?php bloginfo('description') ?></h2>
-
                 </div> 
             </div>
-   
+            
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="menu-toggle-label">
+                ☰
+            </label>
+
             <div class="entete__nav">
                 <?php wp_nav_menu(
                     array(
@@ -50,3 +54,4 @@
             </div>    
         </section>
     </header>
+

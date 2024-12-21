@@ -332,7 +332,8 @@ template {
 Layout
 **************************************************/
 .global {
-  width: 1400px;
+  max-width: 1400px;
+  min-width: auto;
   margin: 0 auto;
   padding: 40px;
   background-color: var(--bleu-transparent);
@@ -371,6 +372,7 @@ Composant
 nav a {
   text-decoration: none;
   color: var(--bleu-fonce);
+  font-size: 18px;
 }
 
 nav a:hover {
@@ -403,10 +405,12 @@ ul {
 .entete__gauche {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .entete__titre h1 > a,
 .entete__titre h2 {
+  font-size: 36px;
   margin: 0;
   color: var(--bleu-fonce);
   text-decoration: none;
@@ -420,6 +424,34 @@ ul {
   gap: 1em;
 }
 
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle-label {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle-label {
+    display: block;
+    z-index: 2;
+  }
+  .entete__nav {
+    display: none;
+  }
+  .menu-toggle:checked + .menu-toggle-label + .entete__nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bleu-pale);
+    z-index: 1;
+    position: absolute;
+    padding: 3em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
 .recherche__input, .recherche__bouton {
   background-color: var(--blanc);
   border: 2px solid var(--bleu-fonce);

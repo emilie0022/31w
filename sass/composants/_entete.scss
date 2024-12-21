@@ -12,9 +12,11 @@
 .entete__gauche{
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .entete__titre h1 > a,
 .entete__titre h2 {
+  font-size: 36px;
   margin: 0;
   color:var(--bleu-fonce);
   text-decoration: none;
@@ -27,3 +29,41 @@
   align-content: center;
   gap: 1em;
 }
+
+
+.menu-toggle {
+    display: none; 
+}
+
+.menu-toggle-label {
+    display: none; 
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle-label {
+        display: block;
+        z-index: 2; 
+    }
+
+    .entete__nav {
+        display: none; 
+    }
+
+
+    .menu-toggle:checked + .menu-toggle-label + .entete__nav {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bleu-pale);
+        z-index: 1;
+        position: absolute;
+        padding: 3em;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+

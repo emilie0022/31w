@@ -1,5 +1,6 @@
 .global {
-  width: 1400px;
+  max-width: 1400px;
+  min-width: auto;
   margin: 0 auto;
   padding: 40px;
   background-color:  var(--bleu-transparent);
