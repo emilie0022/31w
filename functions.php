@@ -37,3 +37,15 @@ if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
   }
  }
  add_action( 'pre_get_posts', 'modifie_requete_principal' );
+
+
+
+ function theme_setup() {
+    add_theme_support('custom-logo', array(
+        'height'      => 100,  
+        'width'       => 300,  
+        'flex-height' => true, 
+        'flex-width'  => true, 
+    ));
+}
+add_action('after_setup_theme', 'theme_setup');

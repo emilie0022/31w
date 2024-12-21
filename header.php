@@ -18,11 +18,18 @@
 <body>
     <header class="entete">
         <section class="global entete__global">
-            <div class="logo">
+            <div class="entete__logo">
                 <a href="<?php echo home_url(); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/logoClubVoyage.png" alt="Logo">
+                    <?php 
+                    if (has_custom_logo()) {
+                        the_custom_logo(); 
+                    } else {
+
+                        echo '<h1>' . get_bloginfo('name') . '</h1>';
+                    }
+                    ?>
                 </a>
-            </div>
+            </div>  
             <div class="entete__titre">
                 <h1><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
                 <h2><?php bloginfo('description') ?></h2>

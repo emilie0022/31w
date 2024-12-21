@@ -389,8 +389,9 @@ ul {
   gap: 1em;
 }
 
-.logo > a > img {
-  width: 130px;
+.entete__logo img {
+  max-width: 150px;
+  height: auto;
 }
 
 .entete__global {
