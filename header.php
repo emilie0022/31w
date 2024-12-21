@@ -18,23 +18,26 @@
 <body>
     <header class="entete">
         <section class="global entete__global">
-            <div class="entete__logo">
-                <a href="<?php echo home_url(); ?>">
-                    <?php 
-                    if (has_custom_logo()) {
-                        the_custom_logo(); 
-                    } else {
+            <div class="entete__gauche">
+                <div class="entete__logo">
+                    <a href="<?php echo home_url(); ?>">
+                        <?php 
+                        if (has_custom_logo()) {
+                            the_custom_logo(); 
+                        } else {
 
-                        echo '<h1>' . get_bloginfo('name') . '</h1>';
-                    }
-                    ?>
-                </a>
-            </div>  
-            <div class="entete__titre">
-                <h1><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
-                <h2><?php bloginfo('description') ?></h2>
+                            echo '<h1>' . get_bloginfo('name') . '</h1>';
+                        }
+                        ?>
+                    </a>
+                </div>  
+                <div class="entete__titre">
+                    <h1><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
+                    <h2><?php bloginfo('description') ?></h2>
 
-            </div>    
+                </div> 
+            </div>
+   
             <div class="entete__nav">
                 <?php wp_nav_menu(
                     array(

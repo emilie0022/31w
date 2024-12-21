@@ -332,7 +332,7 @@ template {
 Layout
 **************************************************/
 .global {
-  width: 1100px;
+  width: 1400px;
   margin: 0 auto;
   padding: 40px;
   background-color: rgba(184, 225, 255, 0.474);
@@ -397,6 +397,12 @@ ul {
 .entete__global {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.entete__gauche {
+  display: flex;
+  flex-direction: row;
 }
 
 .entete__titre h1 > a,
@@ -410,6 +416,8 @@ ul {
 .entete__nav {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  gap: 1em;
 }
 
 .recherche__input, .recherche__bouton {
