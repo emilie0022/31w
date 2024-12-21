@@ -2,18 +2,18 @@
   width: 1400px;
   margin: 0 auto;
   padding: 40px;
-  background-color:  rgba(184, 225, 255, 0.474);
+  background-color:  var(--bleu-transparent);
 }
 
 .entete {
-  background-color:  rgb(84, 153, 203);
+  background-color: var(--bleu-clair);
 }
 
 .principal {
-  background-color: rgb(163, 217, 255);
+  background-color: var(--bleu-pale);
 
 }
 
 .pied {
-  background-color: rgb(84, 153, 203);
+  background-color: var(--bleu-clair);
 }
