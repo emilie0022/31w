@@ -477,6 +477,51 @@ ul {
   font-weight: bold;
 }
 
+.hero {
+  padding: 2rem;
+  height: 100vh;
+}
+
+.hero__overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: var(--bleu-fonce);
+}
+
+.hero__button {
+  display: flex;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bleu-fonce);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero__button:hover {
+  background-color: var(--bleu-clair);
+}
+
+.hero__email {
+  color: var(--bleu-fonce);
+  text-decoration: none;
+}
+
+.hero__email:hover {
+  text-decoration: underline;
+}
+
+.hero__ms {
+  display: flex;
+  gap: 1em;
+}
+
+.hero__ms > a > img {
+  width: 40px;
+}
+
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
 }
