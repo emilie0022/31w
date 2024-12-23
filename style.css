@@ -404,7 +404,7 @@ ul {
   height: auto;
 }
 
-.entete__global {
+.entete__global, .pied__global {
   display: flex;
   align-items: center;
   justify-content: space-between;
