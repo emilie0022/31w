@@ -36,7 +36,7 @@ $hero_instagram = get_field('hero_instagram');
     </section>
 <section class="favories">
     <h2>Destinations Favorites</h2>
-    <div class="favories__affichage">
+    <div class="favories__destination">
         <?php
         $favorites_query = new WP_Query(array(
             'category_name' => 'favorites', // Slug de la catégorie
@@ -44,7 +44,7 @@ $hero_instagram = get_field('hero_instagram');
 
         if ($favorites_query->have_posts()) :
             while ($favorites_query->have_posts()) : $favorites_query->the_post(); ?>
-                <div class="favories-item">
+                <div class="favories-info">
                     <a href="<?php the_permalink(); ?>">
                         <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('medium'); ?>
