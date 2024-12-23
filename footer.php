@@ -37,9 +37,6 @@
                     </div>
                 </section>
 
-
-
-                <!-- Nom de l'auteur et lien GitHub -->
                 <section class="footer__section">
                     <p>Auteur : Emilie Desmarais</p>
                     <br>
