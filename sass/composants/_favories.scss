@@ -1,5 +1,6 @@
 .favories__destination{
     display: flex;
+    flex-flow: row wrap;
     gap: 2em;
     justify-content: space-between;
 }
@@ -24,4 +25,10 @@
     background-color: var(--bleu-fonce);
     color: var(--blanc);
 
+}
+.favories__info h3{
+   font-size: 30px; 
+}
+.favories__info p{
+    font-size: 18px;
 }

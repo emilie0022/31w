@@ -7,7 +7,7 @@
             <br>
             <p>lien github pays: https://github.com/emilie0022/filtre-pays.git</p>
         </div>
-        <div class="global">
+        <div class="pied__global">
             <nav>
                 <ul>
                     <li><a href="#">Accueil</a></li>

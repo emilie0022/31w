@@ -4,6 +4,9 @@
   margin: 0 auto;
   padding: 40px;
   background-color:  var(--bleu-transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .entete {

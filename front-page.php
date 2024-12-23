@@ -34,6 +34,7 @@ $hero_instagram = get_field('hero_instagram');
             </div>
         </div>
     </section>
+
     <section class="favories">
         <h2>Destinations Favorites</h2>
         <div class="favories__destination">
@@ -62,6 +63,7 @@ $hero_instagram = get_field('hero_instagram');
     </section>
 
     <section class="galerie">
+        <h2>Gallerie</h2>
         <?php if (have_posts()): ?>
         <?php while (have_posts()) :  the_post(); ?>
           <article >
@@ -71,7 +73,10 @@ $hero_instagram = get_field('hero_instagram');
       <?php echo do_shortcode('[carrousel]'); ?>
     </section>
     <?php endif ?>
-  
+    <section class="filter">
+        <h2>Filtrer par Catégorie</h2>
+        <?php echo do_shortcode('[filtre_categorie]'); ?>
+    </section> 
   </section>
 
   

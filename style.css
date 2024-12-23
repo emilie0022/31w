@@ -337,6 +337,9 @@ Layout
   margin: 0 auto;
   padding: 40px;
   background-color: var(--bleu-transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .entete {
@@ -405,6 +408,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1400px;
+  min-width: auto;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--bleu-transparent);
 }
 
 .entete__gauche {
@@ -524,6 +532,7 @@ ul {
 
 .favories__destination {
   display: flex;
+  flex-flow: row wrap;
   gap: 2em;
   justify-content: space-between;
 }
@@ -546,6 +555,14 @@ ul {
 .favories__info > a:hover {
   background-color: var(--bleu-fonce);
   color: var(--blanc);
+}
+
+.favories__info h3 {
+  font-size: 30px;
+}
+
+.favories__info p {
+  font-size: 18px;
 }
 
 h1 {

@@ -17,7 +17,7 @@
 
 <body>
     <header class="entete">
-        <section class="global entete__global">
+        <section class="entete__global">
             <div class="entete__gauche">
                 <div class="entete__logo">
                     <a href="<?php echo home_url(); ?>">
