@@ -4,14 +4,14 @@
   <section class="global">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article class="destination">
-      <!-- Titre -->
+
       <header class="destination__header">
         <h1 class="destination__title"><?php the_title(); ?></h1>
       </header>
 
-      <!-- Description -->
       <section class="destination__content">
         <?php the_content(); ?>
+        <?php echo do_shortcode('[carrousel]'); ?>
       </section>
 
       <section class="destination__link">
