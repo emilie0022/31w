@@ -1,24 +1,29 @@
-<?php
-
-/**
- * index.php - Le modèle par défaut de wordpress
- */
-?>
-<?php get_header() ?>
+<?php get_header(); ?>
 
 <main class="principal">
   <section class="global">
-    <h2>Single.php</h2>
-    <div class="principal__conteneur">
-      <?php if (have_posts()): ?>
-        <?php while (have_posts()) :  the_post(); ?>
-          <article class="principal__article">
-            <h2><?php the_title() ?></h2>
-            <?php the_content() ?>
-          </article>
-        <?php endwhile; ?>
-    </div>
-  <?php endif ?>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <article class="destination">
+      <!-- Titre -->
+      <header class="destination__header">
+        <h1 class="destination__title"><?php the_title(); ?></h1>
+      </header>
+
+      <!-- Description -->
+      <section class="destination__content">
+        <?php the_content(); ?>
+      </section>
+
+      <section class="destination__link">
+        <a href="<?php echo get_category_link(get_the_category()[0]->term_id); ?>" class="destination__filter-link">
+          Voir toutes les destinations
+        </a>
+      </section>
+    </article>
+    <?php endwhile; else : ?>
+      <p>Aucune destination trouvée.</p>
+    <?php endif; ?>
   </section>
 </main>
-<?php get_footer() ?>
+
+<?php get_footer(); ?>
