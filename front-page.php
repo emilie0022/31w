@@ -44,7 +44,7 @@ $hero_instagram = get_field('hero_instagram');
 
         if ($favorites_query->have_posts()) :
             while ($favorites_query->have_posts()) : $favorites_query->the_post(); ?>
-                <div class="favories-info">
+                <div class="favories__info">
                     <a href="<?php the_permalink(); ?>">
                         <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('medium'); ?>
