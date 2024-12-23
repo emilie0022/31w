@@ -34,33 +34,46 @@ $hero_instagram = get_field('hero_instagram');
             </div>
         </div>
     </section>
-<section class="favories">
-    <h2>Destinations Favorites</h2>
-    <div class="favories__destination">
-        <?php
-        $favorites_query = new WP_Query(array(
-            'category_name' => 'favorites', // Slug de la catégorie
-        ));
+    <section class="favories">
+        <h2>Destinations Favorites</h2>
+        <div class="favories__destination">
+            <?php
+            $favorites_query = new WP_Query(array(
+                'category_name' => 'favorites', // Slug de la catégorie
+            ));
 
-        if ($favorites_query->have_posts()) :
-            while ($favorites_query->have_posts()) : $favorites_query->the_post(); ?>
-                <div class="favories__info">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <?php the_post_thumbnail('medium'); ?>
-                        <?php endif; ?>
-                        <h3><?php the_title(); ?></h3>
-                        <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
-                    </a>
-                </div>
-            <?php endwhile;
-            wp_reset_postdata(); ?>
-        <?php else : ?>
-            <p>Aucun article favori trouvé.</p>
-        <?php endif; ?>
-    </div>
-</section>
+            if ($favorites_query->have_posts()) :
+                while ($favorites_query->have_posts()) : $favorites_query->the_post(); ?>
+                    <div class="favories__info">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('medium'); ?>
+                            <?php endif; ?>
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php echo wp_trim_words(get_the_content(), 20); ?></p>
+                        </a>
+                    </div>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+            <?php else : ?>
+                <p>Aucun article favori trouvé.</p>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <section class="galerie">
+        <?php if (have_posts()): ?>
+        <?php while (have_posts()) :  the_post(); ?>
+          <article >
+            <p><?php the_content() ?></p>
+          </article>
+        <?php endwhile; ?>
+      <?php echo do_shortcode('[carrousel]'); ?>
+    </section>
+    <?php endif ?>
   
   </section>
+
+  
 </main>
 <?php get_footer() ?>
